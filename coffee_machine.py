@@ -255,7 +255,7 @@ def coffee(memories):
     return 4 #set action completion for X cycles later
 def coffee_poured(memories):
     memories['environment']['coffee_cup']['status'] = 'full'
-    print('coffee cup is full $$$$$$$$$$$$$$$$$$$$')
+    print('coffee cup is full according to the coffee machine')
 CoffeeMachiineProductions.append({
     'matches': {'environment': {'coffee_switch': {'position': 'down'}},
                 'coffee_memory': {'state': {'status': 'off'}}},
