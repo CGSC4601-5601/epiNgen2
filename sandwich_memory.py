@@ -1,6 +1,7 @@
+
+
 from CMCed.production_cycle import ProductionCycle
-from CMCed.retrieve import *
-from CMCed.retrieve_partial import *
+from CMCed.retrieve import retrieve_memory_chunk
 
 
 working_memory = {'focusbuffer': {'state': 'bread1'},
