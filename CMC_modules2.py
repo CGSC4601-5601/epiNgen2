@@ -1,4 +1,6 @@
-# model of procedural productions
+# This model uses the threshold and noise to affect retrieval
+# this is done in dm_productions2.py, retrieve.py, and chunk_noise.py
+
 
 # import productions for modules
 from CMCed.visual_productions import VisualProductions, REQUIRES as VISUAL_REQUIRES
@@ -7,7 +9,7 @@ print("Motor Module REQUIRES:", VISUAL_REQUIRES)
 from CMCed.motor_productions import MotorProductions, REQUIRES as MOTOR_REQUIRES
 print("Motor Module REQUIRES:", MOTOR_REQUIRES)
 
-from CMCed.dm_productions import DMProductions, REQUIRES as DM_REQUIRES
+from CMCed.dm_productions2 import DMProductions, REQUIRES as DM_REQUIRES
 print("DM Module REQUIRES:", DM_REQUIRES)
 
 # import production cycle
@@ -27,12 +29,10 @@ working_memory = {
 }
 
 
-
-
 declarative_memory = {'fries': {'name': 'fries',
                                 'condition': 'good',
                                 'side_order': 'yes',
-                                'utility':1},
+                                'utility':4},
                       'house_salad': {'name': 'house_salad',
                                       'condition': 'good',
                                       'side_order': 'no',

@@ -1,6 +1,6 @@
 import random
 
-def retrieve_memory_chunk(buffer, matches, negations={}, utility_threshold=0):
+def retrieve_memory_chunk(buffer, matches, negations={}, utility_threshold=1):
     """
     Retrieve the highest utility chunk that meets match criteria and negation constraints,
     excluding the 'utility' slot from both matching and the final returned result.

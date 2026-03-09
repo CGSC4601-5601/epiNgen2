@@ -1,14 +1,29 @@
 # dm_productions.py
-# allows dm to retrieve a matching chunk
+# allows dm to retrieve
+# and adds noise - set in chunk_noise.py
+# and a threshold - set in retrieve.py
 
 from CMCed.retrieve import retrieve_memory_chunk
+from CMCed.chunk_noise import add_noise_to_utility
 
 # -------------------------
-# Define DM Productions
+# Define DM Productions (memory)
 # -------------------------
 
 
 DMProductions = []
+
+def adjust_DM(memories):
+    print("adjust_DM: add noise, decay utility, spreading activation boost")
+    add_noise_to_utility(memories['declarative_memory'], scalar=1.0)
+DMProductions.append({
+    'matches': {'working_memory': {'DM_command_buffer': {'state': 'normal'}}},
+    'negations': {},
+    'utility': 10,
+    'action': adjust_DM,
+    'report': "adjust_DM",
+                })
+
 
 def retrieve_DM(memories):
     # Retrieve retrieval_conditions from DM_retieval_buffer
@@ -38,6 +53,8 @@ DMProductions.append({
     'action': retrieve_DM,
     'report': "retrieve_DM",
 })
+
+
 
 # Optional contract for printing / later validation
 REQUIRES = {
