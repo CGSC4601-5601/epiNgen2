@@ -14,7 +14,7 @@ from CMCed.chunk_noise import add_noise_to_utility
 DMProductions = []
 
 def adjust_DM(memories):
-    print("adjust_DM: add noise, decay utility, spreading activation boost")
+    print("adjust_DM: add noise")
     add_noise_to_utility(memories['declarative_memory'], scalar=1.0)
 DMProductions.append({
     'matches': {'working_memory': {'DM_command_buffer': {'state': 'normal'}}},
