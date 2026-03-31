@@ -90,7 +90,7 @@ ProceduralProductions.append({
 
 def fear_monitor(memories):
     memories['working_memory']['focusbuffer']['emotion'] = 'fear'
-    print('understanding current emotion as fear ##########################################')
+    print('understanding current emotion as fear ########################################')
 ProceduralProductions.append({
     'matches': {'working_memory': {'emotional_buffer': {'emotion_state': '01001010'}}},
     'negations': {},

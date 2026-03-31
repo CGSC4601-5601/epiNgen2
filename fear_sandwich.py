@@ -110,7 +110,7 @@ def cheese(memories):
         'delay': 4
     })
     memories['working_memory']['focusbuffer']['state'] = 'ham'
-    print("procedural module !!!!!!!!!!!!!!!! cheese production executed: focus updated to 'ham'; motor action scheduled for cheese.")
+    print("procedural module !!!!!!!!!!!!!!! cheese production executed: focus updated to 'ham'; motor action scheduled for cheese.")
 
 ProceduralProductions.append({
     'matches': {

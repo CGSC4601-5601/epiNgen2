@@ -20,6 +20,7 @@ def adjust_production_utility(production_systems, system_name, production_name, 
             if production['name'] == production_name:
                 # Adjust the utility
                 production['utility'] += change
+                #production['utility'] = old_utility + alpha * (reward - old_utility)
 
                 # Ensure utility doesn't fall below 0
                 if production['utility'] < 0:

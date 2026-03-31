@@ -6,7 +6,7 @@ AmygdalaProductions = []
 
 def fear_spider(memories):
     memories['working_memory']['emotional_buffer']['emotion_state'] = '01001010' # neural state for fear
-    print('amygdala is detecting a fearful situation !!!!!!!!!!!!!!!!!!!!!!!!!')
+    print('amygdala is detecting a fearful situation !!!!!!!!!!!!!!!!!!!!!!!!')
 AmygdalaProductions.append({
     'matches': {'working_memory': {'visual_representation_buffer': {'spider': {'visible':'yes'}}}},
     'negations': {},
